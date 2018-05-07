@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+	<html>
+		<body onload="draw()">
+			<canvas id="sketch" width="1000" height="1000">
+			</canvas>
+			<script>
+				function draw()
+				{
+					var sketch = document.getElementById('sketch');
+					var context = sketch.getContext("2d");
+					
+					for (var s = 1; s <= 4; s++)
+					{
+						
+						for (var c = 1; c <= 4; c++)
+						{
+							context.fillStyle = "#000000"
+							context.fillRect(s * 100 + 50,c * 100,50,50);
+
+							for (var r = 1; r <= 4; r++)
+							{
+								context.fillStyle = "#000000"
+								context.fillRect(s * 100, r * 100 + 50, 50, 50);
+								
+							}
+						}
+						//blue circles
+						for (var l = 0; l <= 3; l++)
+						{
+							context.fillStyle = "#0000ff"
+							context.beginPath();
+							context.arc(l * 100 + 175, 50 + 75, 20, 0, 2 * Math.PI, true);
+							context.closePath();
+							context.fill();
+						}
+						for (var e = 0; e<= 3; e++)
+						{
+							context.fillStyle = "#0000ff"
+							context.beginPath();
+							context.arc(e * 100 + 125, 50 + 125, 20, 0, 2 * Math.PI, true);
+							context.closePath();
+							context.fill();
+						}
+						for (var t = 0; t <= 3; t++)
+						{
+							context.fillStyle = "#0000ff"
+							context.beginPath();
+							context.arc(t * 100 + 175, 50 + 175, 20, 0, 2 * Math.PI, true);
+							context.closePath();
+							context.fill();
+						}
+						
+						//green circles
+						for (var y = 0;y <= 3; y++)
+						{
+							context.fillStyle = "#00ff00"
+							context.beginPath();
+							context.arc(y * 100 + 125, 50 + 325, 20, 0, 2 * Math.PI, true);
+							context.closePath();
+							context.fill();
+						}
+						for (var y = 0;y <= 3; y++)
+						{
+							context.fillStyle = "#00ff00"
+							context.beginPath();
+							context.arc(y * 100 + 175, 50 + 375, 20, 0, 2 * Math.PI, true);
+							context.closePath();
+							context.fill();
+						}
+						for (var y = 0;y <= 3; y++)
+						{
+							context.fillStyle = "#00ff00"
+							context.beginPath();
+							context.arc(y * 100 + 125, 50 + 425, 20, 0, 2 * Math.PI, true);
+							context.closePath();
+							context.fill();
+						}
+					}
+				}
+			</script>
+		</body>
+	</html>
